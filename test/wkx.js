@@ -116,31 +116,31 @@ function assertToGeoJSON(data) {
 describe('wkx', function () {
     describe('Geometry', function () {
         it('parse(wkt) - coordinate', function () {
-            assert.deepEqual(Geometry.parse('POINT(1 2)'), new Point(1, 2));
-            assert.deepEqual(Geometry.parse('POINT(1.2 3.4)'), new Point(1.2, 3.4));
-            assert.deepEqual(Geometry.parse('POINT(1 3.4)'), new Point(1, 3.4));
-            assert.deepEqual(Geometry.parse('POINT(1.2 3)'), new Point(1.2, 3));
+            assert.deepStrictEqual(Geometry.parse('POINT(1 2)'), new Point(1, 2));
+            assert.deepStrictEqual(Geometry.parse('POINT(1.2 3.4)'), new Point(1.2, 3.4));
+            assert.deepStrictEqual(Geometry.parse('POINT(1 3.4)'), new Point(1, 3.4));
+            assert.deepStrictEqual(Geometry.parse('POINT(1.2 3)'), new Point(1.2, 3));
 
-            assert.deepEqual(Geometry.parse('POINT(-1 -2)'), new Point(-1, -2));
-            assert.deepEqual(Geometry.parse('POINT(-1 2)'), new Point(-1, 2));
-            assert.deepEqual(Geometry.parse('POINT(1 -2)'), new Point(1, -2));
+            assert.deepStrictEqual(Geometry.parse('POINT(-1 -2)'), new Point(-1, -2));
+            assert.deepStrictEqual(Geometry.parse('POINT(-1 2)'), new Point(-1, 2));
+            assert.deepStrictEqual(Geometry.parse('POINT(1 -2)'), new Point(1, -2));
 
-            assert.deepEqual(Geometry.parse('POINT(-1.2 -3.4)'), new Point(-1.2, -3.4));
-            assert.deepEqual(Geometry.parse('POINT(-1.2 3.4)'), new Point(-1.2, 3.4));
-            assert.deepEqual(Geometry.parse('POINT(1.2 -3.4)'), new Point(1.2, -3.4));
+            assert.deepStrictEqual(Geometry.parse('POINT(-1.2 -3.4)'), new Point(-1.2, -3.4));
+            assert.deepStrictEqual(Geometry.parse('POINT(-1.2 3.4)'), new Point(-1.2, 3.4));
+            assert.deepStrictEqual(Geometry.parse('POINT(1.2 -3.4)'), new Point(1.2, -3.4));
 
-            assert.deepEqual(Geometry.parse('POINT(1.2e1 3.4e1)'), new Point(12, 34));
-            assert.deepEqual(Geometry.parse('POINT(1.2e-1 3.4e-1)'), new Point(0.12, 0.34));
-            assert.deepEqual(Geometry.parse('POINT(-1.2e1 -3.4e1)'), new Point(-12, -34));
-            assert.deepEqual(Geometry.parse('POINT(-1.2e-1 -3.4e-1)'), new Point(-0.12, -0.34));
+            assert.deepStrictEqual(Geometry.parse('POINT(1.2e1 3.4e1)'), new Point(12, 34));
+            assert.deepStrictEqual(Geometry.parse('POINT(1.2e-1 3.4e-1)'), new Point(0.12, 0.34));
+            assert.deepStrictEqual(Geometry.parse('POINT(-1.2e1 -3.4e1)'), new Point(-12, -34));
+            assert.deepStrictEqual(Geometry.parse('POINT(-1.2e-1 -3.4e-1)'), new Point(-0.12, -0.34));
 
-            assert.deepEqual(Geometry.parse('MULTIPOINT(1 2,3 4)'),
+            assert.deepStrictEqual(Geometry.parse('MULTIPOINT(1 2,3 4)'),
                 new MultiPoint([new Point(1, 2), new Point(3, 4)]));
-            assert.deepEqual(Geometry.parse('MULTIPOINT(1 2, 3 4)'),
+            assert.deepStrictEqual(Geometry.parse('MULTIPOINT(1 2, 3 4)'),
                 new MultiPoint([new Point(1, 2), new Point(3, 4)]));
-            assert.deepEqual(Geometry.parse('MULTIPOINT((1 2),(3 4))'),
+            assert.deepStrictEqual(Geometry.parse('MULTIPOINT((1 2),(3 4))'),
                 new MultiPoint([new Point(1, 2), new Point(3, 4)]));
-            assert.deepEqual(Geometry.parse('MULTIPOINT((1 2), (3 4))'),
+            assert.deepStrictEqual(Geometry.parse('MULTIPOINT((1 2), (3 4))'),
                 new MultiPoint([new Point(1, 2), new Point(3, 4)]));
         });
         it('parse() - invalid input', function () {
@@ -161,7 +161,7 @@ describe('wkx', function () {
             }, /GeometryType TEST not supported/);
         });
         it('parse(wkt) - #31', function () {
-            assert.deepEqual(Geometry.parse(issueTests['#31'].wkt), eval(issueTests['#31'].geometry));
+            assert.deepStrictEqual(Geometry.parse(issueTests['#31'].wkt), eval(issueTests['#31'].geometry));
 		});
     });
 

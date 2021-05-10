@@ -9,7 +9,7 @@ describe('wkx', function () {
             var point = new Point(1, 2);
             point.srid = 4326;
 
-            assert.deepEqual(Geometry.parseGeoJSON({
+            assert.deepStrictEqual(Geometry.parseGeoJSON({
                 type: 'Point',
                 crs: {
                     type: 'name',
@@ -24,7 +24,7 @@ describe('wkx', function () {
             var point = new Point(1, 2);
             point.srid = 4326;
 
-            assert.deepEqual(Geometry.parseGeoJSON({
+            assert.deepStrictEqual(Geometry.parseGeoJSON({
                 type: 'Point',
                 crs: {
                     type: 'name',
@@ -54,7 +54,7 @@ describe('wkx', function () {
             var point = new Point(1, 2);
             point.srid = 4326;
 
-            assert.deepEqual(point.toGeoJSON({ shortCrs: true }), {
+            assert.deepStrictEqual(point.toGeoJSON({ shortCrs: true }), {
                 type: 'Point',
                 crs: {
                     type: 'name',
@@ -69,7 +69,7 @@ describe('wkx', function () {
             var point = new Point(1, 2);
             point.srid = 4326;
 
-            assert.deepEqual(point.toGeoJSON({ longCrs: true }), {
+            assert.deepStrictEqual(point.toGeoJSON({ longCrs: true }), {
                 type: 'Point',
                 crs: {
                     type: 'name',
@@ -84,7 +84,7 @@ describe('wkx', function () {
             var point = new Point(1, 2);
             point.srid = 4326;
 
-            assert.deepEqual(point.toGeoJSON(), {
+            assert.deepStrictEqual(point.toGeoJSON(), {
                 type: 'Point',
                 coordinates: [1, 2]
             });
@@ -93,7 +93,7 @@ describe('wkx', function () {
             var point = new Point(1, 2);
             point.srid = 4326;
 
-            assert.deepEqual(point.toGeoJSON({}), {
+            assert.deepStrictEqual(point.toGeoJSON({}), {
                 type: 'Point',
                 coordinates: [1, 2]
             });

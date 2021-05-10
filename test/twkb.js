@@ -6,22 +6,22 @@ var assert = require('assert');
 describe('wkx', function () {
     describe('parseTwkb', function () {
         it('includes size', function () {            
-            assert.deepEqual(Geometry.parseTwkb(
+            assert.deepStrictEqual(Geometry.parseTwkb(
                              Buffer.from('0102020204', 'hex')),
                              new Point(1, 2));
         });
         it('includes bounding box', function () {
-            assert.deepEqual(Geometry.parseTwkb(
+            assert.deepStrictEqual(Geometry.parseTwkb(
                              Buffer.from('0101020004000204', 'hex')),
                              new Point(1, 2));
         });
         it('includes extended precision', function () {
-            assert.deepEqual(Geometry.parseTwkb(
+            assert.deepStrictEqual(Geometry.parseTwkb(
                              Buffer.from('01080302040608', 'hex')),
                              new Point(1, 2, 3, 4));
         });
         it('includes extended precision and bounding box', function () {
-            assert.deepEqual(Geometry.parseTwkb(
+            assert.deepStrictEqual(Geometry.parseTwkb(
                              Buffer.from('010903020004000600080002040608', 'hex')),
                              new Point(1, 2, 3, 4));
         });
