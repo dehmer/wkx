@@ -1,5 +1,5 @@
 {
-  "name": "wkx",
+  "name": "@syncpoint/wkx",
   "version": "0.5.1",
   "description": "A WKT/WKB/EWKT/EWKB/TWKB/GeoJSON parser and serializer",
   "main": "lib/wkx.js",
