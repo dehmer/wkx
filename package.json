@@ -17,15 +17,15 @@
   "license": "MIT",
   "devDependencies": {
     "async": "^3.2.0",
-    "browserify": "^16.5.0",
+    "browserify": "^17.0.0",
     "coveralls": "^3.0.11",
     "deep-eql": "^4.0.0",
     "jshint": "^2.11.0",
-    "json-stringify-pretty-compact": "^2.0.0",
+    "json-stringify-pretty-compact": "^3.0.0",
     "mkdirp": "^1.0.3",
-    "mocha": "^7.1.1",
+    "mocha": "^8.4.0",
     "nyc": "^15.0.0",
-    "pg": "^7.18.2",
+    "pg": "^8.6.0",
     "uglify-js": "^3.8.0"
   },
   "repository": {
@@ -45,6 +45,6 @@
     "spatial"
   ],
   "dependencies": {
-    "@types/node": "*"
+    "@types/node": "^15.0.2"
   }
 }
