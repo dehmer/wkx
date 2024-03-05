@@ -1,5 +1,8 @@
-wkx [![Build Status](https://travis-ci.org/cschwarz/wkx.svg?branch=master)](https://travis-ci.org/cschwarz/wkx) [![Coverage Status](https://coveralls.io/repos/cschwarz/wkx/badge.svg?branch=master)](https://coveralls.io/r/cschwarz/wkx?branch=master)
-========
+> **NOTE**
+This is a fork of https://github.com/syncpoint/wkx where I just tried to use ES modules instead of browserify, because importing this from Typescript code would yell and tell me that `wkx.d.ts is not a module`.
+
+I am publishing this package on a local registry hosted with https://verdaccio.org/ in order to avoid more mess on npm repository.
+
 
 A WKT/WKB/EWKT/EWKB/TWKB/GeoJSON parser and serializer with support for
 
