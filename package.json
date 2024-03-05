@@ -1,9 +1,10 @@
 {
-  "name": "@syncpoint/wkx",
+  "name": "@local-registry/wkx",
   "version": "0.5.2",
   "description": "A WKT/WKB/EWKT/EWKB/TWKB/GeoJSON parser and serializer",
-  "main": "lib/wkx.js",
-  "types": "lib/wkx.d.ts",
+  "type": "module",
+  "exports": "./lib/wkx.js",
+  "types": "./lib/wkx.d.ts",
   "files": [
     "dist/",
     "lib/"

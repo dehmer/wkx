@@ -1,7 +1,3 @@
-/// <reference types="node" />
-
-declare module "wkx" {
-
     export class Geometry {
         srid: number;
         hasZ: boolean;
@@ -97,4 +93,3 @@ declare module "wkx" {
         static M(geometries?: Geometry[], srid?: number): GeometryCollection;
         static ZM(geometries?: Geometry[], srid?: number): GeometryCollection;
     }
-}
